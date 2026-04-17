@@ -67,6 +67,7 @@ export default function Footer() {
 
         <div className="border-t border-white/5 pt-10 text-center text-gray-500 text-sm">
           <p>© {new Date().getFullYear()} SunFlower Studio. Todos os direitos reservados.</p>
+          <p className="mt-2 text-gray-600">Desenvolvido por <span className="text-gray-400 font-medium tracking-wide">Jaime de Paulo</span></p>
         </div>
       </div>
     </footer>
