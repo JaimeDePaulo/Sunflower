@@ -16,7 +16,7 @@ import { MessageCircle } from 'lucide-react';
 
 export default function App() {
   return (
-    <div className="min-h-screen selection:bg-gold/30 selection:text-gold">
+    <div className="min-h-screen selection:bg-yellow/30 selection:text-yellow">
       <Navbar />
       
       <main>

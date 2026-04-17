@@ -11,16 +11,16 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative"
+            className="relative group"
           >
             <img 
-              src="https://images.unsplash.com/photo-1554048609-7082a607f9d4?auto=format&fit=crop&q=80" 
-              alt="Estúdio SunFlower"
-              className="rounded-2xl shadow-2xl relative z-10"
+              src="https://images.unsplash.com/photo-1597176116047-876a32798fcc?auto=format&fit=crop&q=80" 
+              alt="SunFlower Estúdio"
+              className="rounded-2xl shadow-2xl relative z-10 w-full aspect-[4/5] object-cover border border-white/10 grayscale hover:grayscale-0 transition-all duration-1000"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-yellow z-0" />
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-yellow z-0" />
+            <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-yellow z-0 transition-all duration-500 group-hover:-top-2 group-hover:-left-2" />
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-yellow z-0 transition-all duration-500 group-hover:-bottom-2 group-hover:-right-2" />
           </motion.div>
 
           <motion.div
@@ -30,8 +30,8 @@ export default function About() {
             viewport={{ once: true }}
           >
             <span className="text-yellow font-semibold uppercase tracking-widest text-sm mb-4 block">Nossa História</span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-white">A arte de eternizar sorrisos</h2>
-            <p className="text-gray-300 leading-relaxed mb-8 text-lg">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-text-primary">A arte de eternizar sorrisos</h2>
+            <p className="text-gray-400 leading-relaxed mb-8 text-lg">
               No Studio SunFlower, acreditamos que cada momento é uma obra de arte esperando para ser capturada. 
               O que começou como uma paixão por documentar histórias de amor, tornou-se um refúgio para quem busca 
               sensibilidade, profissionalismo e uma visão artística única.
@@ -46,8 +46,8 @@ export default function About() {
                 <div key={i} className="flex gap-4">
                   <div className="text-yellow">{item.icon}</div>
                   <div>
-                    <h4 className="font-bold mb-1 text-white">{item.title}</h4>
-                    <p className="text-sm text-gray-400">{item.desc}</p>
+                    <h4 className="font-bold mb-1 text-text-primary">{item.title}</h4>
+                    <p className="text-sm text-gray-500">{item.desc}</p>
                   </div>
                 </div>
               ))}

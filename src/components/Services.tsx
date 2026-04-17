@@ -46,7 +46,7 @@ export default function Services() {
       <div className="container mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-20">
           <span className="text-yellow font-semibold uppercase tracking-widest text-sm mb-4 block">Nossa Expertise</span>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-white">Serviços que contam histórias</h2>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-text-primary">Serviços que contam histórias</h2>
           <p className="text-gray-400">Oferecemos soluções completas em imagem, unindo tecnologia de ponta e um olhar poético.</p>
         </div>
 
@@ -63,7 +63,7 @@ export default function Services() {
               <div className={`w-20 h-20 ${service.color} rounded-2xl flex items-center justify-center text-yellow mb-6 group-hover:scale-110 transition-transform`}>
                 {service.icon}
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
+              <h3 className="text-2xl font-bold mb-4 text-text-primary">{service.title}</h3>
               <p className="text-gray-400 leading-relaxed mb-6">
                 {service.desc}
               </p>

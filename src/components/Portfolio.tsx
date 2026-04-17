@@ -18,12 +18,12 @@ export default function Portfolio() {
   const filteredItems = filter === "Todos" ? items : items.filter(i => i.category === filter);
 
   return (
-    <section id="portfolio" className="py-24 bg-white">
+    <section id="portfolio" className="py-24 bg-bg-black">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 text-center md:text-left">
           <div>
-            <span className="text-gold font-semibold uppercase tracking-widest text-sm mb-4 block">Galeria</span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold">Nosso Portfólio</h2>
+            <span className="text-yellow font-semibold uppercase tracking-widest text-sm mb-4 block">Galeria</span>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-text-primary">Nosso Portfólio</h2>
           </div>
           <div className="flex flex-wrap gap-4 justify-center">
             {categories.map(cat => (
@@ -31,7 +31,9 @@ export default function Portfolio() {
                 key={cat}
                 onClick={() => setFilter(cat)}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-                  filter === cat ? 'bg-gold text-white shadow-lg' : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
+                  filter === cat 
+                    ? 'bg-yellow text-bg-black shadow-lg shadow-yellow/20' 
+                    : 'bg-surface-black text-gray-400 hover:bg-surface-black/80'
                 }`}
               >
                 {cat}
@@ -51,7 +53,7 @@ export default function Portfolio() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               key={item.id}
-              className="relative group overflow-hidden rounded-2xl aspect-[4/5]"
+              className="relative group overflow-hidden rounded-2xl aspect-[4/5] border border-white/5"
             >
               <img 
                 src={item.img} 
@@ -60,7 +62,7 @@ export default function Portfolio() {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8 text-white">
-                <span className="text-gold text-xs uppercase tracking-widest mb-2">{item.category}</span>
+                <span className="text-yellow text-xs uppercase tracking-widest mb-2">{item.category}</span>
                 <h4 className="text-2xl font-serif font-bold">{item.title}</h4>
               </div>
             </motion.div>

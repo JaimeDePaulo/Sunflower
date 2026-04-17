@@ -4,19 +4,35 @@
 @theme {
   --font-serif: "Cormorant Garamond", serif;
   --font-sans: "Montserrat", sans-serif;
-  --color-yellow: #FACC15;
-  --color-brand-yellow: #FACC15;
-  --color-bg-black: #0A0A0A;
-  --color-surface-black: #1A1A1A;
+  
+  --color-yellow: var(--yellow);
+  --color-brand-yellow: var(--yellow);
+  --color-bg-black: var(--bg-primary);
+  --color-surface-black: var(--bg-secondary);
+  --color-text-primary: var(--text-primary);
 }
 
 @layer base {
+  :root {
+    --yellow: #FACC15;
+    --bg-primary: #0A0A0A;
+    --bg-secondary: #1A1A1A;
+    --text-primary: #ffffff;
+  }
+
+  [data-theme='light'] {
+    --yellow: #FACC15;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f3f4f6;
+    --text-primary: #000000;
+  }
+
   body {
-    @apply bg-bg-black text-white font-sans antialiased;
+    @apply bg-bg-black text-text-primary font-sans antialiased transition-colors duration-300;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif text-white;
+    @apply font-serif text-text-primary transition-colors duration-300;
   }
 }
 

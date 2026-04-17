@@ -21,11 +21,11 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="depoimentos" className="py-24 bg-soft-white overflow-hidden">
+    <section id="depoimentos" className="py-24 bg-bg-black overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-gold font-semibold uppercase tracking-widest text-sm mb-4 block">Experiências</span>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold">O que dizem sobre nós</h2>
+          <span className="text-yellow font-semibold uppercase tracking-widest text-sm mb-4 block">Experiências</span>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-text-primary">O que dizem sobre nós</h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -36,15 +36,15 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.2 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-3xl relative shadow-sm border border-gray-100"
+              className="bg-surface-black p-8 rounded-3xl relative shadow-sm border border-white/5"
             >
-              <Quote className="absolute top-6 right-6 text-gold/20 w-12 h-12" />
-              <p className="text-gray-600 italic mb-8 relative z-10 text-lg leading-relaxed">
+              <Quote className="absolute top-6 right-6 text-yellow/10 w-12 h-12" />
+              <p className="text-gray-400 italic mb-8 relative z-10 text-lg leading-relaxed">
                 "{t.text}"
               </p>
               <div>
-                <h5 className="font-bold text-lg">{t.name}</h5>
-                <span className="text-gold text-sm uppercase tracking-wider">{t.role}</span>
+                <h5 className="font-bold text-lg text-text-primary">{t.name}</h5>
+                <span className="text-yellow text-sm uppercase tracking-wider">{t.role}</span>
               </div>
             </motion.div>
           ))}
