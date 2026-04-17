@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        isScrolled ? 'bg-white/90 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-6'
+        isScrolled ? 'bg-bg-black/90 backdrop-blur-md py-4 shadow-sm border-b border-white/5' : 'bg-transparent py-6'
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
@@ -35,9 +35,9 @@ export default function Navbar() {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center gap-2"
         >
-          <Camera className="text-gold w-8 h-8" />
-          <span className="text-2xl font-serif font-bold tracking-tight">
-            Sun<span className="text-gold">Flower</span>
+          <Camera className="text-yellow w-8 h-8" />
+          <span className="text-2xl font-serif font-bold tracking-tight text-white">
+            Sun<span className="text-yellow">Flower</span>
           </span>
         </motion.div>
 
@@ -50,7 +50,7 @@ export default function Navbar() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
-              className="text-sm font-medium hover:text-gold transition-colors"
+              className="text-sm font-medium text-white hover:text-yellow transition-colors"
             >
               {link.name}
             </motion.a>
@@ -61,7 +61,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-gold text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-gold/90 transition-all shadow-lg hover:shadow-gold/20"
+            className="bg-yellow text-bg-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-yellow/90 transition-all shadow-lg hover:shadow-yellow/20"
           >
             WhatsApp
           </motion.a>
@@ -69,7 +69,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <div className="md:hidden">
-          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-white">
             {isMobileMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
@@ -82,7 +82,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-gray-100 overflow-hidden"
+            className="md:hidden bg-bg-black border-t border-white/10 overflow-hidden"
           >
             <div className="flex flex-col p-6 gap-4">
               {navLinks.map((link) => (
@@ -90,7 +90,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-lg font-medium hover:text-gold"
+                  className="text-lg font-medium text-white hover:text-yellow"
                 >
                   {link.name}
                 </a>

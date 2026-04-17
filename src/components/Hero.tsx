@@ -25,9 +25,9 @@ export default function Hero() {
             Fotografia & Videografia
           </span>
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-bold mb-6">
-            Sun<span className="text-gold">Flower</span>
+            Sun<span className="text-yellow">Flower</span>
           </h1>
-          <p className="text-xl md:text-2xl font-light italic mb-8 tracking-wide">
+          <p className="text-xl md:text-2xl font-light italic mb-8 tracking-wide text-gray-200">
             “A um click para a felicidade”
           </p>
           
@@ -36,7 +36,7 @@ export default function Hero() {
               href="#portfolio"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gold text-white px-10 py-4 rounded-full text-lg font-medium shadow-2xl hover:bg-gold/90 transition-all border border-gold/50"
+              className="bg-yellow text-bg-black px-10 py-4 rounded-full text-lg font-medium shadow-2xl hover:bg-yellow/90 transition-all border border-yellow/50"
             >
               Ver Portfólio
             </motion.a>

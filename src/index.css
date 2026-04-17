@@ -4,30 +4,31 @@
 @theme {
   --font-serif: "Cormorant Garamond", serif;
   --font-sans: "Montserrat", sans-serif;
-  --color-gold: #D4AF37;
-  --color-soft-white: #FAF9F6;
-  --color-prestige-black: #1A1A1A;
+  --color-yellow: #FACC15;
+  --color-brand-yellow: #FACC15;
+  --color-bg-black: #0A0A0A;
+  --color-surface-black: #1A1A1A;
 }
 
 @layer base {
   body {
-    @apply bg-soft-white text-prestige-black font-sans antialiased;
+    @apply bg-bg-black text-white font-sans antialiased;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    @apply font-serif text-white;
   }
 }
 
-.gold-gradient {
-  background: linear-gradient(135deg, #D4AF37 0%, #F1D592 50%, #D4AF37 100%);
+.yellow-gradient {
+  background: linear-gradient(135deg, #FACC15 0%, #FDE047 50%, #FACC15 100%);
 }
 
-.text-gold-gradient {
+.text-yellow-gradient {
   @apply bg-clip-text text-transparent;
-  background-image: linear-gradient(135deg, #D4AF37 0%, #F1D592 50%, #D4AF37 100%);
+  background-image: linear-gradient(135deg, #FACC15 0%, #FDE047 50%, #FACC15 100%);
 }
 
 .glass-card {
-  @apply bg-white/20 backdrop-blur-md border border-white/30;
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
 }
